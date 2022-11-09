@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>SMB Loan Package</name>
+  <uuid>3c2afe67-9062-4188-9be8-c32fae8578db</uuid>
+</ilog.rules.studio.model.base:RulePackage>

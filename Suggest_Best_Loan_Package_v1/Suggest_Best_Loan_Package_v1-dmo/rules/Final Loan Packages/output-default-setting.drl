@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>94c4d8df-b3cc-4650-b71d-d0f0b96f3e5c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add a new Loan Package where the max_amount is  10000000, the min_amount is 
+         2000000, the processing_fee is 
+         0, the rate_of_interest is 
+         16.6, the tennure_months is 
+         24 to decision ;
+
+add a new Loan Package where the max_amount is  10000000, the min_amount is 
+         2000000, the processing_fee is 
+         0, the rate_of_interest is 
+         16.5, the tennure_months is 
+         20 to decision ;
+
+add a new Loan Package where the max_amount is  2000000, the min_amount is 
+         400000, the processing_fee is 
+         0, the rate_of_interest is 
+         16.7, the tennure_months is 
+         24 to decision ;
+
+add a new Loan Package where the max_amount is  2000000, the min_amount is 
+         400000, the processing_fee is 
+         1000, the rate_of_interest is 
+         16.65, the tennure_months is 
+         20 to decision ;
+
+add a new Loan Package where the max_amount is  400000, the min_amount is 
+         1, the processing_fee is 
+         0, the rate_of_interest is 
+         17.0, the tennure_months is 
+         24 to decision ;
+
+add a new Loan Package where the max_amount is  400000, the min_amount is 
+         1, the processing_fee is 
+         1000, the rate_of_interest is 
+         16.95, the tennure_months is 
+         20 to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

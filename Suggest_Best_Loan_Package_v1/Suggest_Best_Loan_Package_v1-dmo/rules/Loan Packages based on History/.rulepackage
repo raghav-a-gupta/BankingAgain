@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Loan Packages based on History</name>
+  <uuid>df8bd2ae-bf56-4646-b184-49e9ac5424cb</uuid>
+</ilog.rules.studio.model.base:RulePackage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>sanctioned</name>
+  <uuid>1d29ece4-6309-483c-a876-90291ec45f7b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the sanctioned country' is true
+then
+    set decision to a new Rejection where the reason is  "Address in a sanctioned country.", rejected is 
+         true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

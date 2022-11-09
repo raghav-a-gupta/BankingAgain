@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>6a5d545c-337d-4869-9229-4ebcc587e468</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[add a new Loan Package where the max_amount is  10000, the min_amount is 
+     1, the rate_of_interest is
+     7.0  
+to decision ;
+
+add a new Loan Package where the max_amount is  100000, the min_amount is 
+     10001, the rate_of_interest is
+     6.5
+to decision ;
+
+add a new Loan Package where the max_amount is  1000000, the min_amount is 
+     100001, the rate_of_interest is
+     6.75
+to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

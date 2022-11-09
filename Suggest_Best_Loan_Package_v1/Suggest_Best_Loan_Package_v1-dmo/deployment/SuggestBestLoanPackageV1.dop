@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="SuggestBestLoanPackageV1" targetRuleProjectName="Suggest_Best_Loan_Package_v1-dmo">
+  <name>SuggestBestLoanPackageV1Decision</name>
+  <uuid>168c2d3b-8eab-47c5-8f86-7fa3792f7eeb</uuid>
+  <decisionModel href="../rules/Suggest%20Best%20Loan%20Package%20v1.dmo#1d8753e0-4fad-4400-9460-13d66b6e6850"/>
+  <targetRuleProject href="../../Suggest_Best_Loan_Package_v1-dmo#8b2663b0-d0c8-4a95-9983-e59e5ce404c7"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

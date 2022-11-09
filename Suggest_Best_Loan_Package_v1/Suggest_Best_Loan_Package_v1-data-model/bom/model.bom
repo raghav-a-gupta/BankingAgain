@@ -1,0 +1,125 @@
+
+package myModel;
+
+
+public class BusinessBackground
+        property "ads.typeId" "4"
+        property "de.generated" "true"
+{
+    public double capital
+                property "ads.attributeId" "1"
+                property update "true";
+    public double existing_loan
+                property "ads.attributeId" "2"
+                property update "true";
+    public double existing_working_capital
+                property "ads.attributeId" "3"
+                property update "true";
+    public double loan_with_other_banks
+                property "ads.attributeId" "4"
+                property update "true";
+    public double net_profit
+                property "ads.attributeId" "5"
+                property update "true";
+    public long number_of_employees
+                property "ads.attributeId" "6"
+                property update "true";
+    public double turnover
+                property "ads.attributeId" "7"
+                property update "true";
+    public boolean working_capital_facility_takeover_needed
+                property "ads.attributeId" "8"
+                property update "true";
+    public long years_audit_record_available
+                property "ads.attributeId" "9"
+                property update "true";
+    public double years_is_business
+                property "ads.attributeId" "10"
+                property update "true";
+    public BusinessBackground(double capital, 
+        double existing_loan, 
+        double existing_working_capital, 
+        double loan_with_other_banks, 
+        double net_profit, 
+        long number_of_employees, 
+        double turnover, 
+        boolean working_capital_facility_takeover_needed, 
+        long years_audit_record_available, 
+        double years_is_business)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public BusinessBackground()
+                property "dataio.default" "true";
+}
+
+public class Customer
+        property "ads.typeId" "3"
+        property "de.generated" "true"
+{
+    public boolean bankruptcy
+                property "ads.attributeId" "1"
+                property update "true";
+    public string country_code
+                property "ads.attributeId" "2"
+                property update "true";
+    public double credit_score
+                property "ads.attributeId" "3"
+                property update "true";
+    public Customer(boolean bankruptcy, string country_code, double credit_score)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Customer()
+                property "dataio.default" "true";
+}
+
+public class LoanPackage
+        property "ads.typeId" "2"
+        property "de.generated" "true"
+{
+    public double max_amount
+                property "ads.attributeId" "1"
+                property update "true";
+    public double min_amount
+                property "ads.attributeId" "2"
+                property update "true";
+    public double processing_fee
+                property "ads.attributeId" "3"
+                property update "true";
+    public double rate_of_interest
+                property "ads.attributeId" "4"
+                property update "true";
+    public long tennure_months
+                property "ads.attributeId" "5"
+                property update "true";
+    public LoanPackage(double max_amount, double min_amount, double processing_fee, double rate_of_interest, long tennure_months)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public LoanPackage()
+                property "dataio.default" "true";
+}
+
+public class Rejection
+        property "ads.typeId" "1"
+        property "de.generated" "true"
+{
+    public string reason
+                property "ads.attributeId" "1"
+                property update "true";
+    public boolean rejected
+                property "ads.attributeId" "2"
+                property update "true";
+    public Rejection(string reason, boolean rejected)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Rejection()
+                property "dataio.default" "true";
+}
+

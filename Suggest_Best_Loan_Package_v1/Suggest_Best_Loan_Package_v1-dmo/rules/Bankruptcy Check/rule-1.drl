@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>rule-1</name>
+  <uuid>728dd839-843f-44f8-812d-8bf461dbae2b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the customer' is bankruptcy is true
+then
+    set decision to true ;
+else 
+    set decision to false ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

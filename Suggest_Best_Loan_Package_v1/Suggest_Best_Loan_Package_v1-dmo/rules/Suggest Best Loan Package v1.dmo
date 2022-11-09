@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>Suggest Best Loan Package v1</name>
+  <uuid>1d8753e0-4fad-4400-9460-13d66b6e6850</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="SuggestBestLoanPackage" name="Suggest Best Loan Package v1" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_1" name="Customer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="myModel.Customer" collection="false" name="the customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_1_ii" name="Customer" typeRef="myModel.Customer"/>
+    </inputData>
+    <inputData id="node_9" name="Business">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="myModel.BusinessBackground" collection="false" name="the business"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_9_ii" name="Business" typeRef="myModel.BusinessBackground"/>
+    </inputData>
+    <decision id="node_0" name="Bankruptcy Check">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="myModel.Customer" collection="false" name="the customer"/>
+                <output bomType="java.lang.Boolean" collection="false" name="the bankruptcy check"/>
+                <rule defaultRule="false" href="Bankruptcy%20Check/rule-1.drl" kind="BusinessRule" name="rule-1"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_0_ii" name="Bankruptcy Check" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="sanctioned country">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="myModel.Customer" collection="false" name="the customer"/>
+                <output bomType="java.lang.Boolean" collection="false" name="the sanctioned country"/>
+                <rule defaultRule="true" href="sanctioned%20country/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="sanctioned%20country/dt-1.dmt" kind="DecisionTable" name="dt-1"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="sanctioned country" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Reject">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Boolean" collection="false" name="the bankruptcy check"/>
+                <input bomType="java.lang.Boolean" collection="false" name="the sanctioned country"/>
+                <output bomType="myModel.Rejection" collection="false" name="the reject"/>
+                <rule defaultRule="true" href="Reject/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="Reject/sanctioned.drl" kind="BusinessRule" name="sanctioned"/>
+                <rule defaultRule="false" href="Reject/bankruptcy.drl" kind="BusinessRule" name="bankruptcy"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Reject" typeRef="myModel.Rejection"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_8" name="Default Package">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="myModel.BusinessBackground" collection="false" name="the business"/>
+                <output bomType="myModel.LoanPackage" collection="true" name="the default packages"/>
+                <rule defaultRule="true" href="Default%20Package/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="Default Package" typeRef="myModel.LoanPackage[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_15" name="SMB Loan Package">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="myModel.LoanPackage" collection="true" name="the default packages"/>
+                <input bomType="myModel.BusinessBackground" collection="false" name="the business"/>
+                <output bomType="myModel.LoanPackage" collection="true" name="the SMB loan packages"/>
+                <rule defaultRule="false" href="SMB%20Loan%20Package/Copy%20last%20package.drl" kind="BusinessRule" name="Copy last package"/>
+                <rule defaultRule="false" href="SMB%20Loan%20Package/Check%20potential%20discount.drl" kind="BusinessRule" name="Check potential discount"/>
+                <rule defaultRule="true" href="SMB%20Loan%20Package/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_15_ii" name="SMB Loan Package" typeRef="myModel.LoanPackage[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_18" name="Turnover Loan Packages">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="myModel.LoanPackage" collection="true" name="the SMB loan packages"/>
+                <input bomType="myModel.BusinessBackground" collection="false" name="the business"/>
+                <output bomType="myModel.LoanPackage" collection="true" name="the turnover loan packages"/>
+                <rule defaultRule="false" href="Turnover%20Loan%20Packages/Turnover%20rules.drl" kind="BusinessRule" name="Turnover rules"/>
+                <rule defaultRule="true" href="Turnover%20Loan%20Packages/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_18_ii" name="Turnover Loan Packages" typeRef="myModel.LoanPackage[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_15"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_21" name="Loan Packages based on History">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="myModel.LoanPackage" collection="true" name="the turnover loan packages"/>
+                <input bomType="myModel.BusinessBackground" collection="false" name="the business"/>
+                <output bomType="myModel.LoanPackage" collection="true" name="the loan packages based on histories"/>
+                <rule defaultRule="false" href="Loan%20Packages%20based%20on%20History/rule-1.drl" kind="BusinessRule" name="rule-1"/>
+                <rule defaultRule="true" href="Loan%20Packages%20based%20on%20History/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_21_ii" name="Loan Packages based on History" typeRef="myModel.LoanPackage[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_18"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_23" name="Loan Packages based on existing loans">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="myModel.LoanPackage" collection="true" name="the loan packages based on histories"/>
+                <input bomType="myModel.BusinessBackground" collection="false" name="the business"/>
+                <output bomType="myModel.LoanPackage" collection="true" name="the loan packages based on existing loans"/>
+                <rule defaultRule="false" href="Loan%20Packages%20based%20on%20existing%20loans/rule-1.drl" kind="BusinessRule" name="rule-1"/>
+                <rule defaultRule="true" href="Loan%20Packages%20based%20on%20existing%20loans/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_23_ii" name="Loan Packages based on existing loans" typeRef="myModel.LoanPackage[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_21"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_25" name="Final Loan Packages">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="myModel.Rejection" collection="false" name="the reject"/>
+                <input bomType="myModel.LoanPackage" collection="true" name="the loan packages based on existing loans"/>
+                <output bomType="myModel.LoanPackage" collection="true" name="the final loan packages"/>
+                <rule defaultRule="true" href="Final%20Loan%20Packages/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_25_ii" name="Final Loan Packages" typeRef="myModel.LoanPackage[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_23"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>
