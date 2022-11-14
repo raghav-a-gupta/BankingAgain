@@ -4,4 +4,13 @@
   <uuid>4ded64b5-c953-4ed5-b376-44410caf2e9b</uuid>
   <decisionModel href="../rules/Validate%20Business%20Loan.dmo#2f3fb863-421f-4116-935a-8e25b6e287c4"/>
   <targetRuleProject href="../../Validate_Business_Loan-dmo#b9b4e4f3-9242-4573-a312-cfb5d318aab9"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["ValidateBusinessLoanDecision"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>
