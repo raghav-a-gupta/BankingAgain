@@ -1,0 +1,182 @@
+
+package myModel;
+
+
+public class BalanceSheet
+        property "ads.typeId" "4"
+        property "de.generated" "true"
+{
+    public double value
+                property "ads.attributeId" "1"
+                property update "true";
+    public BalanceSheet(double value)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public BalanceSheet()
+                property "dataio.default" "true";
+}
+
+public class BankStatement
+        property "ads.typeId" "3"
+        property "de.generated" "true"
+{
+    public string name_of_bank
+                property "ads.attributeId" "1"
+                property update "true";
+    public java.util.List records domain 0,* class myModel.StatementEntry
+                property "ads.attributeId" "2"
+                property update "true";
+    public long statement_month
+                property "ads.attributeId" "3"
+                property update "true";
+    public long statement_year
+                property "ads.attributeId" "4"
+                property update "true";
+    public BankStatement(string name_of_bank, 
+        java.util.List records domain 0,* class myModel.StatementEntry, 
+        long statement_month, 
+        long statement_year)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public BankStatement()
+                property "dataio.default" "true";
+    public void addTo_records(myModel.StatementEntry records)
+                property collectionAttribute "records"
+                property update "true";
+    public void clear_records()
+                property collectionAttribute "records"
+                property update "true";
+    public void removeFrom_records(myModel.StatementEntry records)
+                property collectionAttribute "records"
+                property update "true";
+    public void set_records(java.util.Collection records domain 0,* class myModel.StatementEntry)
+                property collectionAttribute "records"
+                property update "true";
+}
+
+public class Borrower
+        property "ads.typeId" "5"
+        property "de.generated" "true"
+{
+    public double annual_profit
+                property "ads.attributeId" "1"
+                property update "true";
+    public long audit_records_for_number_of_years
+                property "ads.attributeId" "2"
+                property update "true";
+    public double capital
+                property "ads.attributeId" "3"
+                property update "true";
+    public long number_of_employees
+                property "ads.attributeId" "4"
+                property update "true";
+    public long number_of_years_in_business
+                property "ads.attributeId" "5"
+                property update "true";
+    public double total_existing_loans
+                property "ads.attributeId" "6"
+                property update "true";
+    public double turnover
+                property "ads.attributeId" "7"
+                property update "true";
+    public Borrower(double annual_profit, 
+        long audit_records_for_number_of_years, 
+        double capital, 
+        long number_of_employees, 
+        long number_of_years_in_business, 
+        double total_existing_loans, 
+        double turnover)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Borrower()
+                property "dataio.default" "true";
+}
+
+public class CreditReport
+        property "ads.typeId" "6"
+        property "de.generated" "true"
+{
+    public boolean outstanding_payment
+                property "ads.attributeId" "1"
+                property update "true";
+    public double outstanding_payment_amount
+                property "ads.attributeId" "2"
+                property update "true";
+    public long score
+                property "ads.attributeId" "3"
+                property update "true";
+    public CreditReport(boolean outstanding_payment, double outstanding_payment_amount, long score)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public CreditReport()
+                property "dataio.default" "true";
+}
+
+public class Loan
+        property "ads.typeId" "1"
+        property "de.generated" "true"
+{
+    public double amount
+                property "ads.attributeId" "1"
+                property update "true";
+    public long number_of_years
+                property "ads.attributeId" "2"
+                property update "true";
+    public double rate_of_interest
+                property "ads.attributeId" "3"
+                property update "true";
+    public Loan(double amount, long number_of_years, double rate_of_interest)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Loan()
+                property "dataio.default" "true";
+}
+
+public class Risk
+        property "ads.typeId" "2"
+        property "de.generated" "true"
+{
+    public string reason
+                property "ads.attributeId" "1"
+                property update "true";
+    public string value
+                property "ads.attributeId" "2"
+                property update "true";
+    public Risk(string reason, string value)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Risk()
+                property "dataio.default" "true";
+}
+
+public class StatementEntry
+        property "ads.typeId" "7"
+        property "de.generated" "true"
+{
+    public ilog.rules.brl.SimpleDate date
+                property "ads.attributeId" "1"
+                property update "true";
+    public double value
+                property "ads.attributeId" "2"
+                property update "true";
+    public StatementEntry(ilog.rules.brl.SimpleDate date, double value)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public StatementEntry()
+                property "dataio.default" "true";
+}
+

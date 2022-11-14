@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="ValidateBusinessLoan" targetRuleProjectName="Validate_Business_Loan-dmo">
+  <name>ValidateBusinessLoanDecision</name>
+  <uuid>4ded64b5-c953-4ed5-b376-44410caf2e9b</uuid>
+  <decisionModel href="../rules/Validate%20Business%20Loan.dmo#2f3fb863-421f-4116-935a-8e25b6e287c4"/>
+  <targetRuleProject href="../../Validate_Business_Loan-dmo#b9b4e4f3-9242-4573-a312-cfb5d318aab9"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

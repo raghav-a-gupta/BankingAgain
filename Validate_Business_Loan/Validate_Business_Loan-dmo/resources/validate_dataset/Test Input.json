@@ -1,0 +1,35 @@
+{
+  "theBalanceSheet": {
+    "value": 225.7
+  },
+  "theBankStatement": {
+    "name_of_bank": "Any Bank",
+    "statement_month": "5",
+    "statement_year": "2020",
+    "records": [
+      {
+        "value": 22000,
+        "date": "2020-05-01"
+      }
+    ]
+  },
+  "theBorrower": {
+    "number_of_years_in_business": "10",
+    "audit_records_for_number_of_years": "4",
+    "total_existing_loans": "100000",
+    "annual_profit": "1000000",
+    "number_of_employees": "6",
+    "turnover": 5000000,
+    "capital": 1700000
+  },
+  "theLoan": {
+    "amount": 1000000,
+    "rate_of_interest": "16.7",
+    "number_of_years": "2"
+  },
+  "theCreditReport": {
+    "score": 745,
+    "outstanding_payment": "false",
+    "outstanding_payment_amount": "0"
+  }
+}

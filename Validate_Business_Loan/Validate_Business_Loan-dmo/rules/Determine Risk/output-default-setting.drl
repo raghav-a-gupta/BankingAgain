@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>1b139537-03dd-4026-a187-40f20e5ca66e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Risk where the reason is  "Stable financial records. Medium financial history. Acceptable market exposure.", the value is 
+         "MEDIUM" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

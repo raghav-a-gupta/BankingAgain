@@ -1,19 +1,19 @@
 {
-  "theCustomer" : {
-    "creditScore" : 745,
-    "bankruptcy" : false,
-    "countryCode" : "INDIA"
+  "theCustomer": {
+    "credit_score": "745",
+    "bankruptcy": false,
+    "country_code": "INDIA"
   },
-  "theBusiness" : {
-    "yearsIsBusiness" : 10,
-    "yearsAuditRecordAvailable" : 4,
-    "workingCapitalFacilityTakeoverNeeded" : false,
-    "existingWorkingCapital" : 100000,
-    "existingLoan" : 100000,
-    "loanWithOtherBanks" : 0,
-    "netProfit" : 1000000,
-    "turnover" : 5000000,
-    "capital" : 1700000,
-    "numberOfEmployees" : 6
+  "theBusiness": {
+    "years_is_business": "10",
+    "years_audit_record_available": "4",
+    "working_capital_facility_takeover_needed": "false",
+    "existing_working_capital": "100000",
+    "existing_loan": "100000",
+    "loan_with_other_banks": "0",
+    "net_profit": "1000000",
+    "turnover": 5000000,
+    "capital": 1700000,
+    "number_of_employees": "6"
   }
 }

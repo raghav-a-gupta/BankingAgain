@@ -1,0 +1,112 @@
+
+# myModel.BalanceSheet
+myModel.BalanceSheet#concept.label = Balance Sheet
+myModel.BalanceSheet.BalanceSheet(double)#phrase.navigation = a new {Balance Sheet} where {0, value}
+myModel.BalanceSheet.value#phrase.action = set the value of {this} to {value}
+myModel.BalanceSheet.value#phrase.addition_setter = add {value} to the value of {this}
+myModel.BalanceSheet.value#phrase.navigation = {value} of {this}
+myModel.BalanceSheet.value#phrase.subtraction_setter = subtract {value} from the value of {this}
+
+# myModel.BankStatement
+myModel.BankStatement#concept.label = Bank Statement
+myModel.BankStatement.BankStatement(java.lang.String,java.util.List,long,long)#phrase.navigation = a new {Bank Statement} where {0, name_of_bank} {1, record} {2, statement_month} {3, statement_year}
+myModel.BankStatement.addTo_records(myModel.StatementEntry)#phrase.action = add {0} to the records of {this}
+myModel.BankStatement.clear_records()#phrase.action = clear the records of {this}
+myModel.BankStatement.name_of_bank#phrase.action = set the name_of_bank of {this} to {name_of_bank}
+myModel.BankStatement.name_of_bank#phrase.navigation = {name_of_bank} of {this}
+myModel.BankStatement.records#phrase.action = set the records of {this} to {record}
+myModel.BankStatement.records#phrase.navigation = {record} of {this}
+myModel.BankStatement.removeFrom_records(myModel.StatementEntry)#phrase.action = remove {0} from the records of {this}
+myModel.BankStatement.statement_month#phrase.action = set the statement_month of {this} to {statement_month}
+myModel.BankStatement.statement_month#phrase.addition_setter = add {statement_month} to the statement_month of {this}
+myModel.BankStatement.statement_month#phrase.navigation = {statement_month} of {this}
+myModel.BankStatement.statement_month#phrase.subtraction_setter = subtract {statement_month} from the statement_month of {this}
+myModel.BankStatement.statement_year#phrase.action = set the statement_year of {this} to {statement_year}
+myModel.BankStatement.statement_year#phrase.addition_setter = add {statement_year} to the statement_year of {this}
+myModel.BankStatement.statement_year#phrase.navigation = {statement_year} of {this}
+myModel.BankStatement.statement_year#phrase.subtraction_setter = subtract {statement_year} from the statement_year of {this}
+
+# myModel.Borrower
+myModel.Borrower#concept.label = Borrower
+myModel.Borrower.Borrower(double,long,double,long,long,double,double)#phrase.navigation = a new {Borrower} where {0, annual_profit} {1, audit_records_for_number_of_years} {2, capital} {3, number_of_employees} {4, number_of_years_in_business} {5, total_existing_loans} {6, turnover}
+myModel.Borrower.annual_profit#phrase.action = set the annual_profit of {this} to {annual_profit}
+myModel.Borrower.annual_profit#phrase.addition_setter = add {annual_profit} to the annual_profit of {this}
+myModel.Borrower.annual_profit#phrase.navigation = {annual_profit} of {this}
+myModel.Borrower.annual_profit#phrase.subtraction_setter = subtract {annual_profit} from the annual_profit of {this}
+myModel.Borrower.audit_records_for_number_of_years#phrase.action = set the audit_records_for_number_of_years of {this} to {audit_records_for_number_of_years}
+myModel.Borrower.audit_records_for_number_of_years#phrase.addition_setter = add {audit_records_for_number_of_years} to the audit_records_for_number_of_years of {this}
+myModel.Borrower.audit_records_for_number_of_years#phrase.navigation = {audit_records_for_number_of_years} of {this}
+myModel.Borrower.audit_records_for_number_of_years#phrase.subtraction_setter = subtract {audit_records_for_number_of_years} from the audit_records_for_number_of_years of {this}
+myModel.Borrower.capital#phrase.action = set the capital of {this} to {capital}
+myModel.Borrower.capital#phrase.addition_setter = add {capital} to the capital of {this}
+myModel.Borrower.capital#phrase.navigation = {capital} of {this}
+myModel.Borrower.capital#phrase.subtraction_setter = subtract {capital} from the capital of {this}
+myModel.Borrower.number_of_employees#phrase.action = set the number_of_employees of {this} to {number_of_employees}
+myModel.Borrower.number_of_employees#phrase.addition_setter = add {number_of_employees} to the number_of_employees of {this}
+myModel.Borrower.number_of_employees#phrase.navigation = {number_of_employees} of {this}
+myModel.Borrower.number_of_employees#phrase.subtraction_setter = subtract {number_of_employees} from the number_of_employees of {this}
+myModel.Borrower.number_of_years_in_business#phrase.action = set the number_of_years_in_business of {this} to {number_of_years_in_business}
+myModel.Borrower.number_of_years_in_business#phrase.addition_setter = add {number_of_years_in_business} to the number_of_years_in_business of {this}
+myModel.Borrower.number_of_years_in_business#phrase.navigation = {number_of_years_in_business} of {this}
+myModel.Borrower.number_of_years_in_business#phrase.subtraction_setter = subtract {number_of_years_in_business} from the number_of_years_in_business of {this}
+myModel.Borrower.total_existing_loans#phrase.action = set the total_existing_loans of {this} to {total_existing_loans}
+myModel.Borrower.total_existing_loans#phrase.addition_setter = add {total_existing_loans} to the total_existing_loans of {this}
+myModel.Borrower.total_existing_loans#phrase.navigation = {total_existing_loans} of {this}
+myModel.Borrower.total_existing_loans#phrase.subtraction_setter = subtract {total_existing_loans} from the total_existing_loans of {this}
+myModel.Borrower.turnover#phrase.action = set the turnover of {this} to {turnover}
+myModel.Borrower.turnover#phrase.addition_setter = add {turnover} to the turnover of {this}
+myModel.Borrower.turnover#phrase.navigation = {turnover} of {this}
+myModel.Borrower.turnover#phrase.subtraction_setter = subtract {turnover} from the turnover of {this}
+
+# myModel.CreditReport
+myModel.CreditReport#concept.label = Credit Report
+myModel.CreditReport.CreditReport(boolean,double,long)#phrase.navigation = a new {Credit Report} where {0, outstanding_payment} {1, outstanding_payment_amount} {2, score}
+myModel.CreditReport.outstanding_payment#phrase.action[0] = {this} gets outstanding_payment only if {outstanding_payment}
+myModel.CreditReport.outstanding_payment#phrase.action[1] = make it {outstanding_payment} that {this} is outstanding_payment
+myModel.CreditReport.outstanding_payment#phrase.action[1].deprecated = true
+myModel.CreditReport.outstanding_payment#phrase.navigation = {this} is outstanding_payment
+myModel.CreditReport.outstanding_payment#phrase.negative_predicate = {this} is not outstanding_payment
+myModel.CreditReport.outstanding_payment#phrase.negative_predicate_setter = {this} does not get outstanding_payment
+myModel.CreditReport.outstanding_payment#phrase.positive_predicate_setter = {this} gets outstanding_payment
+myModel.CreditReport.outstanding_payment_amount#phrase.action = set the outstanding_payment_amount of {this} to {outstanding_payment_amount}
+myModel.CreditReport.outstanding_payment_amount#phrase.addition_setter = add {outstanding_payment_amount} to the outstanding_payment_amount of {this}
+myModel.CreditReport.outstanding_payment_amount#phrase.navigation = {outstanding_payment_amount} of {this}
+myModel.CreditReport.outstanding_payment_amount#phrase.subtraction_setter = subtract {outstanding_payment_amount} from the outstanding_payment_amount of {this}
+myModel.CreditReport.score#phrase.action = set the score of {this} to {score}
+myModel.CreditReport.score#phrase.addition_setter = add {score} to the score of {this}
+myModel.CreditReport.score#phrase.navigation = {score} of {this}
+myModel.CreditReport.score#phrase.subtraction_setter = subtract {score} from the score of {this}
+
+# myModel.Loan
+myModel.Loan#concept.label = Loan
+myModel.Loan.Loan(double,long,double)#phrase.navigation = a new {Loan} where {0, amount} {1, number_of_years} {2, rate_of_interest}
+myModel.Loan.amount#phrase.action = set the amount of {this} to {amount}
+myModel.Loan.amount#phrase.addition_setter = add {amount} to the amount of {this}
+myModel.Loan.amount#phrase.navigation = {amount} of {this}
+myModel.Loan.amount#phrase.subtraction_setter = subtract {amount} from the amount of {this}
+myModel.Loan.number_of_years#phrase.action = set the number_of_years of {this} to {number_of_years}
+myModel.Loan.number_of_years#phrase.addition_setter = add {number_of_years} to the number_of_years of {this}
+myModel.Loan.number_of_years#phrase.navigation = {number_of_years} of {this}
+myModel.Loan.number_of_years#phrase.subtraction_setter = subtract {number_of_years} from the number_of_years of {this}
+myModel.Loan.rate_of_interest#phrase.action = set the rate_of_interest of {this} to {rate_of_interest}
+myModel.Loan.rate_of_interest#phrase.addition_setter = add {rate_of_interest} to the rate_of_interest of {this}
+myModel.Loan.rate_of_interest#phrase.navigation = {rate_of_interest} of {this}
+myModel.Loan.rate_of_interest#phrase.subtraction_setter = subtract {rate_of_interest} from the rate_of_interest of {this}
+
+# myModel.Risk
+myModel.Risk#concept.label = Risk
+myModel.Risk.Risk(java.lang.String,java.lang.String)#phrase.navigation = a new {Risk} where {0, reason} {1, value}
+myModel.Risk.reason#phrase.action = set the reason of {this} to {reason}
+myModel.Risk.reason#phrase.navigation = {reason} of {this}
+myModel.Risk.value#phrase.action = set the value of {this} to {value}
+myModel.Risk.value#phrase.navigation = {value} of {this}
+
+# myModel.StatementEntry
+myModel.StatementEntry#concept.label = Statement Entry
+myModel.StatementEntry.StatementEntry(ilog.rules.brl.SimpleDate,double)#phrase.navigation = a new {Statement Entry} where {0, date} {1, value}
+myModel.StatementEntry.date#phrase.action = set the date of {this} to {date}
+myModel.StatementEntry.date#phrase.navigation = {date} of {this}
+myModel.StatementEntry.value#phrase.action = set the value of {this} to {value}
+myModel.StatementEntry.value#phrase.addition_setter = add {value} to the value of {this}
+myModel.StatementEntry.value#phrase.navigation = {value} of {this}
+myModel.StatementEntry.value#phrase.subtraction_setter = subtract {value} from the value of {this}
